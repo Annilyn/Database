@@ -14,4 +14,15 @@
 #### 3.	The delivers table stores the data of the customers info delivery.  Has 6 rows and 4 columns.
 #### 4. The dishes table stores of the data of the dishes info such as a name and price. Has 25 rows and 6 columns.
 #### 5. The orders table stores of tha data info such us date of orders and total price and payment methods. Has 25 rows and 11 columns.
-#### 6. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns. 
+#### 6. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns.
+
+# Queries
+
+SELECT dish_id, dish_name, dish_price 
+FROM dishes
+ LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
+INTERSECT 
+SELECT dish_id, dish_name, dish_price 
+FROM dishes
+ RIGHT JOIN customers ON dishes.dish_id = customers.customer_id
+
