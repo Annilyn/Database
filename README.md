@@ -16,7 +16,7 @@
 #### 5. The orders table stores of tha data info such us date of orders and total price and payment methods. Has 25 rows and 11 columns.
 #### 6. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns.
 
-#### 1. Query
+## 1. Query
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
  
