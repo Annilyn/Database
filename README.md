@@ -25,7 +25,6 @@ FROM dishes
 INTERSECT 
 
 SELECT dish_id, dish_name, dish_price 
-
 FROM dishes
 
  RIGHT JOIN customers ON dishes.dish_id = customers.customer_id
