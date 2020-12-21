@@ -8,7 +8,7 @@
 ## https://github.com/thaisonbk57/Project-4-Design-database-for-a-delivery-service
 
 ## Database has six tables:
-1.	The addresses table stores the data of address of the customers. Has 25 rows and 6 columns.
-2.	The customers table stores the data of the cuctomers information. Has 25 rows and 4 columns.
-3.	The delivers table stores the data of the customers info delivery.  Has 6 rows and 4 coluns.
+#### 1.	The addresses table stores the data of address of the customers. Has 25 rows and 6 columns.
+#### 2.	The customers table stores the data of the cuctomers information. Has 25 rows and 4 columns.
+#### 3.	The delivers table stores the data of the customers info delivery.  Has 6 rows and 4 columns.
 
