@@ -18,7 +18,7 @@
 
 # Queries
 
-SELECT dish_id, dish_name, dish_price 
+=> SELECT dish_id, dish_name, dish_price 
 FROM dishes
  LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
 INTERSECT 
