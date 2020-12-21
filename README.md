@@ -26,4 +26,6 @@ SELECT dish_id, dish_name, dish_price
 FROM dishes
  RIGHT JOIN customers ON dishes.dish_id = customers.customer_id
  #### 1. This implies the result contains all the rows which are common to both the SELECT statements.
+ ![1](https://user-images.githubusercontent.com/72851503/102737253-e19df600-4381-11eb-9a93-2b0646b34c32.jpg)
+
 
