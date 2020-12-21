@@ -33,7 +33,8 @@ SELECT dish_name,
 SUM(dish_price) 
 FROM dishes
 GROUP BY dish_name 
-#### 2. 
+#### 2.
+![2](https://user-images.githubusercontent.com/72851503/102738848-4c513080-4386-11eb-8733-d11352ab1f6b.jpg)
 
 
 
