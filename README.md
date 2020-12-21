@@ -18,11 +18,13 @@
 
 # Queries
 
-=> SELECT dish_id, dish_name, dish_price 
+ SELECT dish_id, dish_name, dish_price 
 FROM dishes
  LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
 INTERSECT 
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
  RIGHT JOIN customers ON dishes.dish_id = customers.customer_id
+ #### 1. This implies the result contains all the rows which are common to both the SELECT statements.
+ #### 1. 
 
