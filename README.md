@@ -19,10 +19,8 @@
 ## 1. Query
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
-  LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
- 
+LEFT JOIN customers ON dishes.dish_id = customers.customer_id  
 INTERSECT 
-
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
 RIGHT JOIN customers ON dishes.dish_id = customers.customer_id
