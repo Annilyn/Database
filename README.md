@@ -6,3 +6,9 @@
 #### This is an exercise to practice SQL statements using the thaisonbk57 db. To download the db, visit the repository (link below) and download locally. Then open in db browser and test my statements below.
 
 ## https://github.com/thaisonbk57/Project-4-Design-database-for-a-delivery-service
+
+## Database has six tables:
+1.	The addresses table stores the data of address of the customers. Has 25 rows and 6 columns.
+2.	The customers table stores the data of the cuctomers information. Has 25 rows and 4 columns.
+3.	The delivers table stores the data of the customers info delivery.  Has 6 rows and 4 coluns.
+
