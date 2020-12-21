@@ -17,7 +17,6 @@
 #### 6. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns.
 
 ## 1. Query
- #### 1. This implies the result contains all the rows which are common to both the SELECT statements. It is important to know which dishes sell big. 
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
   LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
@@ -28,6 +27,7 @@ SELECT dish_id, dish_name, dish_price
 FROM dishes
 RIGHT JOIN customers ON dishes.dish_id = customers.customer_id
 
+ #### 1. This implies the result contains all the rows which are common to both the SELECT statements. It is important to know which dishes sell big. 
 ![1](https://user-images.githubusercontent.com/72851503/102737394-422d3300-4382-11eb-9e39-f12e046b2aa8.jpg)
 
 
