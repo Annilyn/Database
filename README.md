@@ -40,6 +40,7 @@ GROUP BY dish_name
 SELECT dish_id, dish_name, dish_name, dish_price FROM dishes
 WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
 #### 3.To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
+![5](https://user-images.githubusercontent.com/72851503/103144679-88123e80-4768-11eb-9f7a-61c90abe2fc0.jpg)
 
 ## 4. Query
 SELECT order_date,
@@ -48,9 +49,9 @@ FROM orders GROUP BY order_date
 
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 ## 5. Query
-SELECT MAX(dish_price)FROM dishes
+SELECT dish_id, dish_name, dish_name, dish_price FROM dishes
+WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 
-![4](https://user-images.githubusercontent.com/72851503/103144396-a75a9d00-4763-11eb-8837-939c47bb6d9b.jpg)
 
 
 
