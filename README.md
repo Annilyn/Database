@@ -46,7 +46,7 @@ WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
 SELECT order_date,
 COUNT(*) 
 FROM orders GROUP BY order_date
-#### 5.To find the number of employees per department, you use the COUNT with GROUP BY clause as follows.
+#### 4.To find the number of order per date, you use the COUNT with GROUP BY clause as follows.
 
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 ## 5. Query
