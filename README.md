@@ -39,6 +39,7 @@ GROUP BY dish_name
 SELECT order_date,
 COUNT(*) 
 FROM orders GROUP BY order_date
+
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 
 
