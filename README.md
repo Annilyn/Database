@@ -35,16 +35,23 @@ FROM dishes
 GROUP BY dish_name 
 #### 2. This implies the result of total or sum of the SELECT statements. It is important to know what dish the big profit is.
 ![2](https://user-images.githubusercontent.com/72851503/102738848-4c513080-4386-11eb-8733-d11352ab1f6b.jpg)
+
 ## 3. Query
+SELECT dish_id, dish_name, dish_name, dish_price FROM dishes
+WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
+#### 3.To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
+
+## 4. Query
 SELECT order_date,
 COUNT(*) 
 FROM orders GROUP BY order_date
 
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
-## 4. Query
+## 5. Query
 SELECT MAX(dish_price)FROM dishes
 
 ![4](https://user-images.githubusercontent.com/72851503/103144396-a75a9d00-4763-11eb-8837-939c47bb6d9b.jpg)
+
 
 
 
