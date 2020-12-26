@@ -51,6 +51,7 @@ FROM orders GROUP BY order_date
 ## 5. Query
 SELECT dish_id, dish_name, dish_name, dish_price FROM dishes
 WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
+![6](https://user-images.githubusercontent.com/72851503/103144727-5ea5e280-4769-11eb-9ccd-0b70b5f3c18f.jpg)
 
 
 
