@@ -39,8 +39,11 @@ GROUP BY dish_name
 SELECT order_date,
 COUNT(*) 
 FROM orders GROUP BY order_date
-
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
+## 4. Query
+SELECT MAX(dish_price)FROM dishes
+![4](https://user-images.githubusercontent.com/72851503/103144396-a75a9d00-4763-11eb-8837-939c47bb6d9b.jpg)
+
 
 
 
