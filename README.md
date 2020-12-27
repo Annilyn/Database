@@ -46,7 +46,7 @@ WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
 SELECT order_date,
 COUNT(*) 
 FROM orders GROUP BY order_date
-#### 4.To find the number of order per date, you use the COUNT with GROUP BY clause as follows.
+#### 4.To find the number of order per date, you use the COUNT with GROUP BY clause.
 
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 ## 5. Query
@@ -55,6 +55,11 @@ WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 
 #### 5. To find the maximum price of dish, you apply the MAX function to the dish_price column of the dishes table.
 ![6](https://user-images.githubusercontent.com/72851503/103144727-5ea5e280-4769-11eb-9ccd-0b70b5f3c18f.jpg)
+
+## 6. Query
+#### 6.To get the sum of all price of all orders,apply the SUM function to the dish_price column,To include the dish name in the result set, join the orders table with the dishes table
+![7](https://user-images.githubusercontent.com/72851503/103165431-cbe17280-4852-11eb-90cd-9ce62d6b0d32.jpg)
+
 
 
 
