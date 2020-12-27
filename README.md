@@ -59,8 +59,10 @@ WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 ![55](https://user-images.githubusercontent.com/72851503/103166394-7a3de580-485c-11eb-9d97-cb921ef03406.jpg)
 
 ## 5. Query
-#### • To get the total price to all orders dishes.
-#### • It is important know what
+SELECT dish_id, dish_name, SUM(dish_price) FROM dishes 
+INNER JOIN orders ON dish_id = dish_id GROUP BY dish_id
+#### • To get the total price to all orders dishes. To include the dish name in the result set, join the orders table with the dishes table.
+#### • It is important know how much the total orders per dishes.
 #### Output:
 ![7](https://user-images.githubusercontent.com/72851503/103165431-cbe17280-4852-11eb-90cd-9ce62d6b0d32.jpg)
 
@@ -71,12 +73,16 @@ FROM dishes GROUP BY dish_id)
 ORDER BY dish_name, dish_price
 #### •	To find all dishes has price are equal to the average price of dishes.
 #### •	It is important to determine what is average price.
+#### Output:
 ![666](https://user-images.githubusercontent.com/72851503/103169692-06f69c80-4879-11eb-950b-ae809e2cabe8.jpg)
 
 ## 7. Query
 SELECT SUM(dish_price) FROM dishes
 #### •	To find the sum price of all dishes.
-#### •	It is important to determine total price of all dishes..
+#### •	It is important to determine total price of all dishes.
+#### Output:
+![77](https://user-images.githubusercontent.com/72851503/103169935-11b23100-487b-11eb-98d0-37a4bb33bd6e.jpg)
+
 
 
 
