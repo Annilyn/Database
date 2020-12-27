@@ -27,7 +27,8 @@ INTERSECT
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
 RIGHT JOIN customers ON dishes.dish_id = customers.customer_id 
- #### 1. This implies the result contains all the rows which are common to both the SELECT statements. It is important to see the selected columns at the same time and not be with others in a table. 
+ #### • This implies the result contains all the rows which are common to both the SELECT statements. 
+ #### • It is important to see the selected columns at the same time and not be with others in a table. 
 ![1](https://user-images.githubusercontent.com/72851503/102737394-422d3300-4382-11eb-9e39-f12e046b2aa8.jpg)
 
 ## 2. Query
@@ -35,27 +36,31 @@ SELECT dish_name,
 SUM(dish_price) 
 FROM dishes
 GROUP BY dish_name 
-#### 2. This implies the result of total or sum of the SELECT statements. It is important to know what dish the big profit is.
+#### • This implies the result of total or sum of the SELECT statements.
+#### • It is important to know what dish the big profit is.
 ![2](https://user-images.githubusercontent.com/72851503/102738848-4c513080-4386-11eb-8733-d11352ab1f6b.jpg)
 
 ## 3. Query
 SELECT dish_id,dish_name, dish_price FROM dishes
 WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
-#### 3.To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
+#### • To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
+#### • It is important to know what are minimun price of all dish.
 ![33](https://user-images.githubusercontent.com/72851503/103166430-ee788900-485c-11eb-9e00-f0e822d70d37.jpg)
 
 ## 4. Query
 SELECT order_date,
 COUNT(*) 
 FROM orders GROUP BY order_date
-#### 4.To find the number of order per date, you use the COUNT with GROUP BY clause.
+#### • To find the number of order per date.
+#### • It is important to know what date many orders and busy days.
 
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 ## 5. Query
 SELECT dish_id, dish_name, dish_price FROM dishes
 WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 
-#### 5. To find the maximum price of dish, you apply the MAX function to the dish_price column of the dishes table.
+#### • To find the maximum price of dish.
+#### • The MAX function to the dish_price column of the dishes table.
 ![55](https://user-images.githubusercontent.com/72851503/103166394-7a3de580-485c-11eb-9d97-cb921ef03406.jpg)
 
 ## 6. Query
