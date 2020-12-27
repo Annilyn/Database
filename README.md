@@ -17,15 +17,13 @@
 #### 6. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns.
 
 ## 1. Query
-'''html
-<p> SELECT dish_id, dish_name, dish_price 
+SELECT dish_id, dish_name, dish_price 
 FROM dishes
 LEFT JOIN customers ON dishes.dish_id = customers.customer_id  
 INTERSECT 
 SELECT dish_id, dish_name, dish_price 
 FROM dishes
-RIGHT JOIN customers ON dishes.dish_id = customers.customer_id </p>
-'''
+RIGHT JOIN customers ON dishes.dish_id = customers.customer_id 
  #### 1. This implies the result contains all the rows which are common to both the SELECT statements. It is important to see the selected columns at the same time and not be with others in a table. 
 ![1](https://user-images.githubusercontent.com/72851503/102737394-422d3300-4382-11eb-9e39-f12e046b2aa8.jpg)
 
