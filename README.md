@@ -62,9 +62,6 @@ WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 #### 6. To get the sum of all price of all orders,apply the SUM function to the dish_price column,To include the dish name in the result set, join the orders table with the dishes table.
 ![7](https://user-images.githubusercontent.com/72851503/103165431-cbe17280-4852-11eb-90cd-9ce62d6b0d32.jpg)
 
-## 7. Query
-#### 7. 
-
 
 
 
