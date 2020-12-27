@@ -49,11 +49,11 @@ FROM orders GROUP BY order_date
 
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 ## 5. Query
-SELECT dish_id, dish_name, dish_name, dish_price FROM dishes
+SELECT dish_id, dish_name, dish_price FROM dishes
 WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 
 #### 5. To find the maximum price of dish, you apply the MAX function to the dish_price column of the dishes table.
-![6](https://user-images.githubusercontent.com/72851503/103144727-5ea5e280-4769-11eb-9ccd-0b70b5f3c18f.jpg)
+![55](https://user-images.githubusercontent.com/72851503/103166394-7a3de580-485c-11eb-9d97-cb921ef03406.jpg)
 
 ## 6. Query
 #### 6. To get the sum of all price of all orders,apply the SUM function to the dish_price column,To include the dish name in the result set, join the orders table with the dishes table.
