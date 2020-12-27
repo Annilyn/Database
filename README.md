@@ -15,7 +15,7 @@
 #### 5. The orders table stores of tha data info such us date of orders and total price and payment methods. Has 25 rows and 11 columns.
 #### 6. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns.
 
-#### This is an exercise to practice SQL statements using the thaisonbk57 db. To download the db, visit the repository (link below) and download locally. Then open in db browser and test my statements below.
+### This is an exercise to practice SQL statements using the thaisonbk57 db. To download the db, visit the repository (link below) and download locally. Then open in db browser and test my statements below.
 
 ## https://github.com/thaisonbk57/Project-4-Design-database-for-a-delivery-service
 
