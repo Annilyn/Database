@@ -59,8 +59,10 @@ WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 ![55](https://user-images.githubusercontent.com/72851503/103166394-7a3de580-485c-11eb-9d97-cb921ef03406.jpg)
 
 ## 6. Query
-#### 6. To get the sum of all price of all orders,apply the SUM function to the dish_price column,To include the dish name in the result set, join the orders table with the dishes table.
+#### • To get the sum of all price of all orders,apply the SUM function to the dish_price column,To include the dish name in the result set, join the orders table with the dishes table.
 ![7](https://user-images.githubusercontent.com/72851503/103165431-cbe17280-4852-11eb-90cd-9ce62d6b0d32.jpg)
+
+
 
 
 
