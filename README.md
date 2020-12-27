@@ -71,6 +71,13 @@ FROM dishes GROUP BY dish_id)
 ORDER BY dish_name, dish_price
 #### •	To find all dishes has price are equal to the average price of dishes.
 #### •	It is important to determine what is average price.
+![666](https://user-images.githubusercontent.com/72851503/103169692-06f69c80-4879-11eb-950b-ae809e2cabe8.jpg)
+
+## 7. Query
+SELECT SUM(dish_price) FROM dishes
+#### •	To find the sum price of all dishes.
+#### •	It is important to determine total price of all dishes..
+
 
 
 
