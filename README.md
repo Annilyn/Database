@@ -1,5 +1,5 @@
 # Database-delivery-service
-This database Design for a delivery serviceis of a restuarant have six tables such as addresses,customers, delivers,dishes, orders, and order_details. This database collects sales report. Also collects the information of the customers such as name, address and Phone number, email and what thier orders.
+*   This database Design for a delivery serviceis of a restuarant have six tables such as addresses,customers, delivers,dishes, orders, and order_details. This database collects sales report. Also collects the information of the customers such as name, address and Phone number, email and what thier orders.
 ## ERD Image:
 ![Diagram](https://user-images.githubusercontent.com/72851503/102731216-39346580-4372-11eb-9c51-bfe759d083d4.png)
 ## Database Dependency Diagram:
@@ -13,7 +13,7 @@ This database Design for a delivery serviceis of a restuarant have six tables su
  5. The order_details table stores of the data info about the quanlity of orders. Has 25 rows and 4 columns.
  6. The dishes table stores of the data of the dishes info such as a name and price. Has 25 rows and 6 columns.
 
-•This is an exercise to practice SQL statements using the thaisonbk57 db. To download the db, visit the repository (link below) and download locally. Then open in db browser and test my statements below.
+* This is an exercise to practice SQL statements using the thaisonbk57 db. To download the db, visit the repository (link below) and download locally. Then open in db browser and test my statements below.
 #### https://github.com/thaisonbk57/Project-4-Design-database-for-a-delivery-service
 
 ## 1. Query
@@ -25,9 +25,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### FROM dishes
 #### RIGHT JOIN customers ON dishes.dish_id = customers.customer_id;
 
-• This implies the result contains all the rows which are common to both the SELECT statements.
+* This implies the result contains all the rows which are common to both the SELECT statements.
 
-• It is important to see the selected columns at the same time and not be with others in a table. 
+* It is important to see the selected columns at the same time and not be with others in a table. 
 #### Output:
 ![1](https://user-images.githubusercontent.com/72851503/102737394-422d3300-4382-11eb-9e39-f12e046b2aa8.jpg)
 
@@ -36,9 +36,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### FROM dishes
 #### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes );
 
-• To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
+*  To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
 
-• It is important to know what are minimun price of all dish.
+*  It is important to know what are minimun price of all dish.
 ## Output:
 ![33](https://user-images.githubusercontent.com/72851503/103166430-ee788900-485c-11eb-9e00-f0e822d70d37.jpg)
 
@@ -47,9 +47,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### FROM orders 
 #### GROUP BY order_date;
 
-• To find the number of order per date.
+* To find the number of order per date.
 
-• It is important to know what date many orders and busy days.
+* It is important to know what date many orders and busy days.
 #### Output:
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 
@@ -58,9 +58,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### FROM dishes
 #### WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes );
 
-• To find the maximum price of dish.
+* To find the maximum price of dish.
 
-• It is important to know what are maximum price of all dish.
+* It is important to know what are maximum price of all dish.
 #### Output:
 ![55](https://user-images.githubusercontent.com/72851503/103166394-7a3de580-485c-11eb-9d97-cb921ef03406.jpg)
 
@@ -70,9 +70,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### INNER JOIN orders ON dish_id = dish_id 
 #### GROUP BY dish_id;
 
-• To get the total price to all orders dishes. To include the dish name in the result set, join the orders table with the dishes table.
+* To get the total price to all orders dishes. To include the dish name in the result set, join the orders table with the dishes table.
 
-• It is important know how much the total orders per dishes.
+* It is important know how much the total orders per dishes.
 #### Output:
 ![7](https://user-images.githubusercontent.com/72851503/103165431-cbe17280-4852-11eb-90cd-9ce62d6b0d32.jpg)
 
@@ -83,18 +83,28 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### FROM dishes 
 #### GROUP BY dish_id) 
 #### ORDER BY dish_name, dish_price;
- •	To find all dishes has price are equal to the average price of dishes.
+ *	To find all dishes has price are equal to the average price of dishes.
  
- •	It is important to determine what is average price.
+ *	It is important to determine what is average price.
 #### Output:
 ![666](https://user-images.githubusercontent.com/72851503/103169692-06f69c80-4879-11eb-950b-ae809e2cabe8.jpg)
 
 ## 7. Query
+#### SELECT order_date,delivery_street, order_status, order_total 
+#### FROM orders 
+#### WHERE order_total = (SELECT DISTINCT order_total 
+#### FROM orders 
+#### ORDER BY order_total DESC LIMIT 2 , 2);
+* To get what date has 3rd highest.Combine both queries into a single query.
+* It is impotant to determine what date has 3rd highest. 
+
+
+## 7. Query
 #### SELECT SUM(dish_price) 
 #### FROM dishes;
-•	To find the sum price of all dishes.
+*	To find the sum price of all dishes.
  
-•	It is important to determine total price of all dishes.
+*	It is important to determine total price of all dishes.
 #### Output:
 ![77](https://user-images.githubusercontent.com/72851503/103169935-11b23100-487b-11eb-98d0-37a4bb33bd6e.jpg)
 
