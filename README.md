@@ -130,6 +130,16 @@
 ####  Output :
 ![111](https://user-images.githubusercontent.com/72851503/103215376-227fa700-494e-11eb-8b15-2040e3d7b9e2.jpg)
 
+##  12. Quary
+#### SELECT order_date, order_status, 
+#### ROW_NUMBER() OVER(ORDER BY order_status DESC) RANK 
+#### FROM orders;
+*    This query shows the date of orders what are the status.
+*    This query can help determine what date of orders has canceled or delivered.
+####  Output :
+![12](https://user-images.githubusercontent.com/72851503/103217828-84dba600-4954-11eb-85db-c00193741e55.jpg)
+
+
 
 
 
