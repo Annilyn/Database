@@ -16,7 +16,7 @@
 * This is an exercise to practice SQL statements using the thaisonbk57 db. To download the db, visit the repository (link below) and download locally. Then open in db browser and test my statements below.
 #### https://github.com/thaisonbk57/Project-4-Design-database-for-a-delivery-service
 
-##  1. Quary 
+##  1. Query 
 #### SELECT dish_name, dish_description, dish_price,
 #### CASE 
 #### WHEN dish_price < 3 THEN 'Low' 
@@ -29,7 +29,7 @@
 #### Output:
 ![888](https://user-images.githubusercontent.com/72851503/103211936-7d140580-4944-11eb-88bf-ad209bb4d56e.jpg)
 
-##  2. Quary 
+##  2. Query 
 #### SELECT dish_id, dish_name, dish_description, dish_price 
 #### FROM dishes 
 #### ORDER BY dish_price DESC 
@@ -119,6 +119,16 @@
 *	 It is important to determine total price of all dishes.
 #### Output:
 ![77](https://user-images.githubusercontent.com/72851503/103169935-11b23100-487b-11eb-98d0-37a4bb33bd6e.jpg)
+
+##  11 . Query 
+#### SELECT customer_id, customer_name, customer_phone
+ #### FROM customers 
+#### WHERE EXISTS( SELECT 1 FROM addresses 
+#### WHERE addresses.customer_id = customers.customer_id);
+*   To finds all customers who have at least one dependent.
+*   It is important to determine who are dependent.
+####  Output :
+![111](https://user-images.githubusercontent.com/72851503/103215376-227fa700-494e-11eb-8b15-2040e3d7b9e2.jpg)
 
 
 
