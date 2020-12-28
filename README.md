@@ -1,5 +1,5 @@
 # Database-delivery-service
-*   This database Design for a delivery serviceis of a restuarant have six tables such as addresses,customers, delivers,dishes, orders, and order_details. This database collects sales report. Also collects the information of the customers such as name, address and Phone number, email and what thier orders.
+*   This database Design for a delivery serviceis of a restuarant and the details of the dish. Have six tables such as addresses,customers, delivers,dishes, orders, and order_details. This database collects sales report. Also collects the information of the customers such as name, address and Phone number, email and what thier orders.
 ## ERD Image:
 ![Diagram](https://user-images.githubusercontent.com/72851503/102731216-39346580-4372-11eb-9c51-bfe759d083d4.png)
 ## Database Dependency Diagram:
@@ -36,7 +36,7 @@
 #### FROM dishes
 #### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes );
 
-*  To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
+*  To find the lowest (minimum) price of dish, apply the MIN function to the dish_price column of the dishes table.
 
 *  It is important to know what are minimun price of all dish.
 ## Output:
@@ -84,7 +84,6 @@
 #### GROUP BY dish_id) 
 #### ORDER BY dish_name, dish_price;
  *	To find all dishes has price are equal to the average price of dishes.
- 
  *	It is important to determine what is average price.
 #### Output:
 ![666](https://user-images.githubusercontent.com/72851503/103169692-06f69c80-4879-11eb-950b-ae809e2cabe8.jpg)
@@ -97,6 +96,8 @@
 #### ORDER BY order_total DESC LIMIT 2 , 2);
 * To get what date has 3rd highest.Combine both queries into a single query.
 * It is impotant to determine what date has 3rd highest. 
+#### Output:
+![33rd](https://user-images.githubusercontent.com/72851503/103208598-02df8300-493c-11eb-9fa2-efcda6920faa.jpg)
 
 
 ## 7. Query
