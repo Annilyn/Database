@@ -17,13 +17,13 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### https://github.com/thaisonbk57/Project-4-Design-database-for-a-delivery-service
 
 ## 1. Query
-###### SELECT dish_id, dish_name, dish_price 
-###### FROM dishes
-###### LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
-###### INTERSECT 
-###### SELECT dish_id, dish_name, dish_price 
-###### FROM dishes
-###### RIGHT JOIN customers ON dishes.dish_id = customers.customer_id 
+#### SELECT dish_id, dish_name, dish_price 
+#### FROM dishes
+#### LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
+#### INTERSECT 
+#### SELECT dish_id, dish_name, dish_price 
+#### FROM dishes
+#### RIGHT JOIN customers ON dishes.dish_id = customers.customer_id 
 
 • This implies the result contains all the rows which are common to both the SELECT statements.
 
@@ -32,9 +32,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ![1](https://user-images.githubusercontent.com/72851503/102737394-422d3300-4382-11eb-9e39-f12e046b2aa8.jpg)
 
 ## 2. Query
-###### SELECT dish_id,dish_name, dish_price 
-###### FROM dishes
-###### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
+#### SELECT dish_id,dish_name, dish_price 
+#### FROM dishes
+#### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
 
 • To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
 
@@ -54,9 +54,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ![3](https://user-images.githubusercontent.com/72851503/103144227-ce639f80-4760-11eb-914f-a0c3e4f4c406.jpg)
 
 ## 4. Query
-###### SELECT dish_id, dish_name, dish_price 
-###### FROM dishes
-###### WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
+#### SELECT dish_id, dish_name, dish_price 
+#### FROM dishes
+#### WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
 
 • To find the maximum price of dish.
 
@@ -65,10 +65,10 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ![55](https://user-images.githubusercontent.com/72851503/103166394-7a3de580-485c-11eb-9d97-cb921ef03406.jpg)
 
 ## 5. Query
-##### SELECT dish_id, dish_name, SUM(dish_price) 
-##### FROM dishes 
-##### INNER JOIN orders ON dish_id = dish_id 
-##### GROUP BY dish_id
+#### SELECT dish_id, dish_name, SUM(dish_price) 
+#### FROM dishes 
+#### INNER JOIN orders ON dish_id = dish_id 
+#### GROUP BY dish_id
 
 • To get the total price to all orders dishes. To include the dish name in the result set, join the orders table with the dishes table.
 
@@ -77,12 +77,12 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ![7](https://user-images.githubusercontent.com/72851503/103165431-cbe17280-4852-11eb-90cd-9ce62d6b0d32.jpg)
 
 ## 6. Query
-###### SELECT dish_name, dish_price 
-###### FROM dishes 
-###### WHERE dish_price = ANY ( SELECT AVG(dish_price) 
-###### FROM dishes 
-###### GROUP BY dish_id) 
-###### ORDER BY dish_name, dish_price
+#### SELECT dish_name, dish_price 
+#### FROM dishes 
+#### WHERE dish_price = ANY ( SELECT AVG(dish_price) 
+#### FROM dishes 
+#### GROUP BY dish_id) 
+#### ORDER BY dish_name, dish_price
 
  •	To find all dishes has price are equal to the average price of dishes.
  
@@ -91,8 +91,8 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ![666](https://user-images.githubusercontent.com/72851503/103169692-06f69c80-4879-11eb-950b-ae809e2cabe8.jpg)
 
 ## 7. Query
-###### SELECT SUM(dish_price) 
-###### FROM dishes
+#### SELECT SUM(dish_price) 
+#### FROM dishes
 
  •	To find the sum price of all dishes.
  
