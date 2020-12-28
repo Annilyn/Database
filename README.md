@@ -58,7 +58,7 @@
 #### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes );
 *  To find the lowest (minimum) price of dish, apply the MIN function to the dish_price column of the dishes table.
 *  It is important to know what are minimun price of all dish.
-## Output:
+#### Output:
 ![33](https://user-images.githubusercontent.com/72851503/103166430-ee788900-485c-11eb-9e00-f0e822d70d37.jpg)
 
 ## 5. Query
