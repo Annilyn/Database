@@ -137,8 +137,7 @@
 *    This query shows the date of orders what are the status.
 *    This query can help determine what date of orders has canceled or delivered.
 ####  Output :
-![12](https://user-images.githubusercontent.com/72851503/103217828-84dba600-4954-11eb-85db-c00193741e55.jpg)
-
+![122](https://user-images.githubusercontent.com/72851503/103219144-e4878080-4957-11eb-8ce1-b8657f113494.jpg)
 
 
 
