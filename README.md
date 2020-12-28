@@ -2,6 +2,9 @@
 #### This database Design for a delivery serviceis of a restuarant have six tables such as addresses,customers, delivers,dishes, orders, and order_details. This database collects sales report. Also collects the information of the customers such as name, address and Phone number, email and what thier orders.
 ## ERD Image:
 ![Diagram](https://user-images.githubusercontent.com/72851503/102731216-39346580-4372-11eb-9c51-bfe759d083d4.png)
+## Database Dependency Diagram
+![Dependency Diagram](https://user-images.githubusercontent.com/72851503/103187779-c5a9cf80-4900-11eb-85fe-e0cd60e384c6.png)
+
 ## Table Name and Discription:
 #### 1.	The addresses table stores the data of address of the customers. Has 25 rows and 6 columns.
 #### 2.	The customers table stores the data of the cuctomers information. Has 23 rows and 4 columns.
