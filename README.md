@@ -26,7 +26,7 @@
 #### FROM dishes;
 *    If the price is less than 3, “Low”. If the price is between 3 and 5, it returns “average”. When the price is greater than 5, “High”.
 *    It is important to determine what dish are low price and high price or average.
-## Output:
+#### Output:
 ![888](https://user-images.githubusercontent.com/72851503/103211936-7d140580-4944-11eb-88bf-ad209bb4d56e.jpg)
 
 ##  2. Quary 
@@ -36,7 +36,7 @@
 #### LIMIT 1 OFFSET 1;
 *    To get what dish has 2nd  highest price in the restaurant. 
 *    It is important to determine the 2nd highest price.
-##  Output :
+####  Output :
 ![999](https://user-images.githubusercontent.com/72851503/103211462-4093da00-4943-11eb-994b-454dab719cbf.jpg)
 
 ## 3. Query
