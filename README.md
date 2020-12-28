@@ -2,7 +2,7 @@
 This database Design for a delivery serviceis of a restuarant have six tables such as addresses,customers, delivers,dishes, orders, and order_details. This database collects sales report. Also collects the information of the customers such as name, address and Phone number, email and what thier orders.
 ## ERD Image:
 ![Diagram](https://user-images.githubusercontent.com/72851503/102731216-39346580-4372-11eb-9c51-bfe759d083d4.png)
-## Database Dependency Diagram
+## Database Dependency Diagram:
 ![Dependency Diagram](https://user-images.githubusercontent.com/72851503/103187779-c5a9cf80-4900-11eb-85fe-e0cd60e384c6.png)
 
 ## Table Name and Discription:
@@ -23,7 +23,7 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### INTERSECT 
 #### SELECT dish_id, dish_name, dish_price 
 #### FROM dishes
-#### RIGHT JOIN customers ON dishes.dish_id = customers.customer_id 
+#### RIGHT JOIN customers ON dishes.dish_id = customers.customer_id;
 
 • This implies the result contains all the rows which are common to both the SELECT statements.
 
@@ -34,7 +34,7 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ## 2. Query
 #### SELECT dish_id,dish_name, dish_price 
 #### FROM dishes
-#### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes )
+#### WHERE dish_price = ( SELECT MIN(dish_price) FROM dishes );
 
 • To find the lowest (minimum) price of dish, you apply the MIN function to the dish_price column of the dishes table.
 
@@ -43,9 +43,9 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ![33](https://user-images.githubusercontent.com/72851503/103166430-ee788900-485c-11eb-9e00-f0e822d70d37.jpg)
 
 ## 3. Query
-###### SELECT order_date, COUNT(*) 
-###### FROM orders 
-###### GROUP BY order_date
+#### SELECT order_date, COUNT(*) 
+#### FROM orders 
+#### GROUP BY order_date;
 
 • To find the number of order per date.
 
@@ -56,7 +56,7 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 ## 4. Query
 #### SELECT dish_id, dish_name, dish_price 
 #### FROM dishes
-#### WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes )
+#### WHERE dish_price = ( SELECT MAX(dish_price) FROM dishes );
 
 • To find the maximum price of dish.
 
@@ -68,7 +68,7 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### SELECT dish_id, dish_name, SUM(dish_price) 
 #### FROM dishes 
 #### INNER JOIN orders ON dish_id = dish_id 
-#### GROUP BY dish_id
+#### GROUP BY dish_id;
 
 • To get the total price to all orders dishes. To include the dish name in the result set, join the orders table with the dishes table.
 
@@ -82,8 +82,7 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 #### WHERE dish_price = ANY ( SELECT AVG(dish_price) 
 #### FROM dishes 
 #### GROUP BY dish_id) 
-#### ORDER BY dish_name, dish_price
-
+#### ORDER BY dish_name, dish_price;
  •	To find all dishes has price are equal to the average price of dishes.
  
  •	It is important to determine what is average price.
@@ -92,11 +91,10 @@ This database Design for a delivery serviceis of a restuarant have six tables su
 
 ## 7. Query
 #### SELECT SUM(dish_price) 
-#### FROM dishes
-
- •	To find the sum price of all dishes.
+#### FROM dishes;
+•	To find the sum price of all dishes.
  
- •	It is important to determine total price of all dishes.
+•	It is important to determine total price of all dishes.
 #### Output:
 ![77](https://user-images.githubusercontent.com/72851503/103169935-11b23100-487b-11eb-98d0-37a4bb33bd6e.jpg)
 
