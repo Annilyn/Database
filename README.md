@@ -29,17 +29,7 @@
 #### Output:
 ![888](https://user-images.githubusercontent.com/72851503/103211936-7d140580-4944-11eb-88bf-ad209bb4d56e.jpg)
 
-##  2. Query 
-#### SELECT dish_id, dish_name, dish_description, dish_price 
-#### FROM dishes 
-#### ORDER BY dish_price DESC 
-#### LIMIT 1 OFFSET 1;
-*    To get what dish has 2nd  highest price in the restaurant. 
-*    It is important to determine the 2nd highest price.
-####  Output :
-![999](https://user-images.githubusercontent.com/72851503/103211462-4093da00-4943-11eb-994b-454dab719cbf.jpg)
-
-## 3. Query
+## 2. Query
 #### SELECT dish_id, dish_name, dish_price 
 #### FROM dishes
 #### LEFT JOIN customers ON dishes.dish_id = customers.customer_id 
@@ -51,6 +41,16 @@
 *  It is important to see the selected columns at the same time and not be with others in a table. 
 #### Output:
 ![1](https://user-images.githubusercontent.com/72851503/102737394-422d3300-4382-11eb-9e39-f12e046b2aa8.jpg)
+
+##  3. Query 
+#### SELECT dish_id, dish_name, dish_description, dish_price 
+#### FROM dishes 
+#### ORDER BY dish_price DESC 
+#### LIMIT 1 OFFSET 1;
+*    To get what dish has 2nd  highest price in the restaurant. 
+*    It is important to determine the 2nd highest price.
+####  Output :
+![999](https://user-images.githubusercontent.com/72851503/103211462-4093da00-4943-11eb-994b-454dab719cbf.jpg)
 
 ## 4. Query
 #### SELECT dish_id,dish_name, dish_price 
