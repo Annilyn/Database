@@ -139,6 +139,93 @@
 ####  Output :
 ![122](https://user-images.githubusercontent.com/72851503/103219144-e4878080-4957-11eb-8ce1-b8657f113494.jpg)
 
+## 13. Query
+#### SELECT customers.customer_name AS customers, addresses.address_street AS addresses
+#### FROM customers
+#### INNER JOIN addresses
+#### ON customers.customer_id = addresses.customer_id
+#### AND customers.customer_name = 'Francisco Chang';
+*   This query shows where the address of customer name Francisco Chang.
+*   It is important so that to see where the address of the customer to deliver orders properly .
+####  Output :
+![13](https://user-images.githubusercontent.com/72851503/103251960-eda73a80-49b5-11eb-8b89-d65fda8ff915.jpg)
+
+## 14. Query
+#### SELECT DISTINCT dish_price, dish_name
+#### FROM dishes e1
+#### WHERE 2 = (SELECT count(DISTINCT dish_price)
+#### WHERE e1.dish_price <= e2.dish_price);
+*   This query to find the second dishes with biggest price.
+*   This query is important to determine the ranking of dishes in terms of price.
+####  Output :
+![14](https://user-images.githubusercontent.com/72851503/103252323-4aefbb80-49b7-11eb-8027-8fa69f9a9ae7.jpg)
+
+## 15. Query
+#### SELECT dishes.dish_name, 
+#### COUNT(order_details.quantity) AS quantityCount 
+#### FROM dishes LEFT JOIN order_details 
+#### dishes.dish_id = order_details.dish_id 
+#### GROUP BY order_details.dish_id 
+#### ORDER BY quantityCount DESC
+*   This query shows how many quantity in each order dishes has.
+*   This query is important to count how many quantity in each order dishes.
+####  Output :
+![15](https://user-images.githubusercontent.com/72851503/103253048-7cb65180-49ba-11eb-8119-8b3d2492d790.jpg)
+
+ ## 16. Query
+#### SELECT customers.customer_name, IFNULL(orders.order_date, 'N/A') AS Officialorder_date 
+#### FROM customers 
+#### LEFT JOIN orders ON customers.customer_id = orders.customer_id 
+#### AND orders.order_status = 'R' 
+#### ORDER BY customers.customer_name;
+*    This query shows the official order date of all the customers name.
+*    It is important to know the official order date of each customers name in the database.
+####  Output :
+![16](https://user-images.githubusercontent.com/72851503/103254137-20a1fc00-49bf-11eb-9721-c2c4bf7908d1.jpg)
+
+ ## 17. Query
+####  SELECT dish_price, dish_description,dish_name,
+#### ROW_NUMBER() OVER(ORDER BY dish_price DESC) RANK 
+#### FROM dishes
+ #### LIMIT 3;
+*    This query shows the top 3 dishes with biggest price and thier description.
+*    This query can help determine what dishes is the 3 most biggest price.
+####  Output :
+![17](https://user-images.githubusercontent.com/72851503/103255145-2e598080-49c3-11eb-9f06-c82ae02a1771.jpg)
+
+## 18. Query
+#### Select * from customers  
+#### Where customer_name 
+#### like'%S'
+*   This query shows the records of customer name may be any no of  character but it should end with ‘S’.
+*   It is important to determine who’s customet has name end with ‘S’.
+####  Output :
+![188](https://user-images.githubusercontent.com/72851503/103255717-55b14d00-49c5-11eb-9977-f133f4ac8c2f.jpg)
+
+## 19. Query
+#### SELECT delivers.deliver_name AS delivers, orders.payment_method AS payment_method 
+#### FROM delivers
+#### INNER JOIN orders 
+#### ON delivers.deliver_id = orders.deliver_id 
+#### AND orders.payment_method = 'cash'
+*   To find out who delivered paid cash.
+*   It is important to determine the cash money who delivered.
+####  Output :
+![19](https://user-images.githubusercontent.com/72851503/103257878-f99ef680-49cd-11eb-81ab-6da4e0f2fa02.jpg)
+
+## 20. Query
+#### SELECT order_id, order_date, order_status, 
+#### COUNT(deliver_id) number_delivered 
+#### FROM orders 
+#### WHERE order_id IS NOT NULL 
+#### GROUP BY order_id;
+*   This query shows the number of delivered on date with delivery ID.
+*    It is important  to determine how many delivered on that date.
+####  Output :
+![20](https://user-images.githubusercontent.com/72851503/103258622-c742c880-49d0-11eb-8f74-dbf3fe53a8e1.jpg)
+
+
+
 
 
 
